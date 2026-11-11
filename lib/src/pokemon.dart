@@ -32,8 +32,17 @@ class Pokemon extends StatelessWidget {
       appBar: AppBar (
         title: Text("My Pokemon App"),
       ),
-      body: Container(
-        color: Colors.white,
+      body: ListView .builder(
+        itemCount: listpokemon.length,
+        itemBuilder: (context, index) {
+          return Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              listpokemon[index],
+              style: TextStyle(fontSize: 20),
+            ),
+          );
+        },
       ),
     );
   }
