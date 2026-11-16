@@ -28,16 +28,17 @@ class Pokemon extends StatelessWidget {
     });
 
     return Scaffold(
-      appBar: AppBar(title: Text("My Pokemon App")),
-      body: ListView.builder(
-        itemCount: listpokemon.length,
-        itemBuilder: (context, index) {
-          return Container(
-            padding: EdgeInsets.all(20),
-            child: Text(listpokemon[index], style: TextStyle(fontSize: 20)),
-          );
-        },
-      ),
+      appBar: AppBar(title: Text("My Pokemon App")), // App Bar
+      body: Container(child: Image.asset("images/pikachu.png")),
+      // body: ListView.builder(
+      //   itemCount: listpokemon.length,
+      //   itemBuilder: (context, index) {
+      //     return Container(
+      //       padding: EdgeInsets.all(20),
+      //       child: Text(listpokemon[index], style: TextStyle(fontSize: 20)),
+      //     );
+      //   },
+      // ),
     );
   }
 }
