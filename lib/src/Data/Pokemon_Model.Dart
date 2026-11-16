@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import '../Data/Pokemon_Model.Dart';
-
 class PokemonModel {
-  String name;
-  String image;
-  PokemonModel(this.name, this.image);
+  final String name;
+  final String image;
+
+  const PokemonModel({required this.name, required this.image});
 }
