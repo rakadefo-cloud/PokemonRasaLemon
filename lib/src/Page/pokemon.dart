@@ -18,6 +18,7 @@ class Pokemon extends StatelessWidget {
 
   @override
   Widget build(BuildContext) {
+
     // print("_print pokemon ${listpokemon[1]}");
     listpokemon.forEach((Element) {
       if (Element == "Pikachu") {
@@ -28,17 +29,25 @@ class Pokemon extends StatelessWidget {
     });
 
     return Scaffold(
-      appBar: AppBar(title: Text("My Pokemon App")), // App Bar
-      body: Container(child: Image.asset("images/pikachu.png")),
-      // body: ListView.builder(
-      //   itemCount: listpokemon.length,
-      //   itemBuilder: (context, index) {
-      //     return Container(
-      //       padding: EdgeInsets.all(20),
-      //       child: Text(listpokemon[index], style: TextStyle(fontSize: 20)),
-      //     );
-      //   },
-      // ),
-    );
+      appBar: AppBar(
+        title: Text("My Pokemon App")
+        ), // App Bar
+        // body: Container(
+        //  child: Image.asset("images/Zubat.png"),
+        // ),
+      body: ListView.builder(
+        itemCount: listpokemon.length,
+         itemBuilder: (context, index) {
+          return Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              listpokemon[index],
+              style: TextStyle(fontSize: 20),
+            )  // Text
+          ); // Container
+         },
+      ),  // ListView.builder
+    ); //Scaffold
   }
-}
+} 
+  
